@@ -1,101 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliza Santana | Portfólio</title>
 
     <style>
-        body {
-            font-family: Arial;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            text-align: center;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            padding: 20px;
         }
 
         .card {
-            max-width: 90%;
-            background-color: rgba(255, 255, 255, 0.95);
-            width: 340px;
-            margin: 40px auto;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            text-align: left;
-            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            animation: fadeIn 0.8s ease;
         }
 
-        h1 {
-            color: darkgreen;
+        .header {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            padding: 25px;
             text-align: center;
-            font-size: 24px;
+            color: white;
         }
 
-        p {
-            margin-bottom: 10px;
+        .header h1 {
+            font-size: 26px;
+        }
+
+        .header p {
             font-size: 14px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: left;
         }
 
         h2 {
-            margin-top: 20px;
-            color: darkgreen;
+            color: #1b5e20;
+            margin: 15px 0 8px;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 10px;
         }
 
         img {
-            border-radius: 10px;
-            margin: 10px 0;
             width: 100%;
+            border-radius: 12px;
+            margin: 10px 0;
         }
 
-        button {
-            background-color: darkgreen;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-top: 10px;
+        }
+
+        .tag {
+            background: #e8f5e9;
+            color: #1b5e20;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        a button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
             transition: 0.3s;
         }
 
-        button:hover {
-            background-color: green;
+        .whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+            color: white;
+        }
+
+        a button:hover {
             transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
         }
     </style>
 </head>
-
 <body>
 
 <div class="card">
 
-    <h1>Eliza Santana</h1>
-    <p>Estudante de Análise e Desenvolvimento de Sistemas | Desenvolvedora Web em formação</p>
+    <div class="header">
+        <h1>Eliza Santana</h1>
+        <p>ADS | Desenvolvedora Web em formação</p>
+    </div>
 
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Programação">
+    <div class="content">
 
-    <h2>Sobre mim</h2>
-    <p>Estou iniciando minha jornada na programação, aprendendo HTML, CSS e JavaScript. Buscando crescer e construir projetos reais.</p>
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Tecnologia">
 
-    <h2>Habilidades</h2>
-    <p>HTML | CSS | JavaScript (iniciante)</p>
+        <h2>Sobre mim</h2>
+        <p>Estou iniciando minha jornada na programação, aprendendo HTML, CSS e JavaScript. Buscando crescer e construir projetos reais.</p>
 
-    <h2>Projetos</h2>
-    <p><strong>Site Pessoal</strong><br>
-    Este site foi desenvolvido como parte do meu aprendizado em HTML e CSS.</p>
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+        </div>
 
-    <p><strong>Em breve...</strong><br>
-    Novos projetos serão adicionados aqui.</p>
+        <h2>Projetos</h2>
+        <p><strong>Site Pessoal</strong><br>Projeto criado para praticar HTML e CSS.</p>
+        <p><strong>Em breve...</strong><br>Novos projetos serão adicionados.</p>
 
-    <h2>Contato</h2>
+        <h2>Contato</h2>
+        <p>Me chama nas redes:</p>
 
-    <a href="https://wa.me/5591992222481?text=Ola%20vi%20seu%20perfil%20e%20quero%20falar%20com%20voce" target="_blank">
-        <button>WhatsApp</button>
-    </a>
+        <div class="buttons">
+            <a href="https://wa.me/5591992222481?text=Ola%20vi%20seu%20perfil%20e%20quero%20falar%20com%20voce" target="_blank">
+                <button class="whatsapp">WhatsApp</button>
+            </a>
 
-    <a href="https://instagram.com/ellyzasantanna" target="_blank">
-        <button>Instagram</button>
-    </a>
+            <a href="https://instagram.com/ellyzasantanna" target="_blank">
+                <button class="instagram">Instagram</button>
+            </a>
+        </div>
+
+    </div>
 
 </div>
 
